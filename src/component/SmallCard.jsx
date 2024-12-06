@@ -13,7 +13,7 @@ export default function SmallCard({ text, value }) {
      text-lg  
      rounded-md'>
             <div className='px-5 text-lg  relative '>{value}<sup className='text-xs'>0</sup></div>
-            <div>{text} 1 </div>
+            <div>{text}  </div>
         </div>
     )
 }

@@ -28,7 +28,7 @@ export default function Weather() {
   return (
     <div className='w-full bg-blue-950 h-screen flex items-center justify-center'>
 
--
+
 
       <div className='rounded-lg bg-blue-900  bg-opacity-65 p-5 md:p-10 max-w-screen-sm mx-auto border-1
          border-white border-opacity-10 flex flex-col gap-8  items-center shadow-xl
