@@ -10,7 +10,7 @@ export default function Weather() {
 
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=7205c14d797983014b90b5b8b5d3bb82`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_MY_KEY}`)
       .then(data => data.json())
       .then((data) => {
         setWeather({
@@ -27,7 +27,6 @@ export default function Weather() {
 
   return (
     <div className='w-full bg-blue-950 h-screen flex items-center justify-center'>
-
 
 
       <div className='rounded-lg bg-blue-900  bg-opacity-65 p-5 md:p-10 max-w-screen-sm mx-auto border-1
