@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useFetchApi from '../hooks/useFetchApi'
+import SmallCard from './SmallCard';
 
 export default function Weather() {
 
@@ -43,22 +44,10 @@ export default function Weather() {
             </h1>
 
             <div className='flex flex-wrap grid-cols-2 gap-8 justify-between items-center w-full'>
-                <div className='flex items-center justify-center bg-blue-800 bg-opacity-50 p-4 text-white text-center text-lg w-1/3 md:w-[45%] rounded-md'>
-                   <div className='px-5 text-lg  relative '>{weather.minTemp}<sup className='text-xs'>0</sup></div>
-                    <div>Minimum </div>
-                </div>
-                <div className='flex items-center justify-center bg-blue-800 bg-opacity-50 p-4 text-white text-center text-lg w-1/3 md:w-[45%] rounded-md'>
-                   <div className='px-5 text-lg  relative'>{weather.maxTemp}<sup className='text-xs'>0</sup></div>
-                    <div>Maximum </div>
-                </div>
-                <div className='flex items-center justify-center bg-blue-800 bg-opacity-50 p-4 text-white text-center text-lg w-1/3 md:w-[45%] rounded-md'>
-                   <div className='px-5 text-lg  relative'>{weather.feels}<sup className='text-xs'>0</sup></div>
-                    <div>Feels Like</div>
-                </div>
-                <div className='flex items-center justify-center bg-blue-800 bg-opacity-50 p-4 text-white text-center text-lg w-1/3 md:w-[45%] rounded-md'>
-                   <div className='px-5 text-lg  relative'>{weather.wind}<sup className='text-xs'>0</sup></div>
-                    <div>Wind</div>
-                </div>
+              <SmallCard text={"Minimum"} value={weather.minTemp} />
+              <SmallCard text={"Maximum"} value={weather.maxTemp} />
+              <SmallCard text={"Feels Like"} value={weather.feels} />
+              <SmallCard text={"Wind"} value={weather.wind} />
             </div>
         </div>
 
